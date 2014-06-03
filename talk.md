@@ -25,14 +25,14 @@ Reproducibility - evidence of the problem
 ======================================================
 
 * In general: Nature, vol 496, 2013.
-    - A new mechanism for independently replicating research findings is needed: Nature Biotechnology 30, 806 (2012)
+    - A new mechanism for independently replicating findings needed: Nature Biotechnology 30, 806 (2012)
     - Easy to misinterpret artefacts as biologically important results: Nature 487, 406 (2012) 
     - Too many sloppy mistakes: Nature 483, 509 (2012) 
 * In epidemiology
-    - Why most research findings are false: Ioannidis Plos Med., 2005
+    - Why most research findings are false: Ioannidis, 2005
 * In social sciences and in psychology
-    - Reproducibility Project: Psychology (https://osf.io/ezcuj/wiki/home/)
-    - Simmons, J. P., L. D. Nelson, and U. Simonsohn. “False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant.” 2011. Shows an easy 60% FPR instead of 5%. 
+    - Reproducibility Project: Psychology (open science fundation)
+    - Simmons, et al. “... Undisclosed Flexibility ... Allows Presenting Anything as Significant.” 2011. 
 * In cognitive neuroscience
     - Barch, Deanna M., and Tal Yarkoni. “... Special Issue on Reliability and Replication in Cognitive and Affective Neuroscience Research.”  2013.
 
@@ -192,6 +192,14 @@ What are the solutions: technical
     - Replication always
     - power analyses with the smallest effect size (cost does not enter in this calculation) 
     - Effect size variation estimation (bootstrapping)
+
+Power Calculator with 
+======================
+
+- Purcell, et al. “Genetic Power Calculator [...]” Bioinformatics 19, no. 1 (2003): 149–50.
+
+![Genetic calculator](./images/gene_pw_calc.png)
+
 
 What are the solutions: learning 
 ===================================
