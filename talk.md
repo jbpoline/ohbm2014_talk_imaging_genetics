@@ -20,8 +20,12 @@ Reproducibility - preliminary remarks
 Reproducibility - evidence of the problem
 ======================================================
 
+* In general: Nature, vol 496, 2013.
+    - A new mechanism for independently replicating research findings is needed: Nature Biotechnology 30, 806 (2012)
+    - Easy to misinterpret artefacts as biologically important results: Nature 487, 406 (2012) 
+    - Too many sloppy mistakes: Nature 483, 509 (2012) 
 * In epidemiology
-    - Ioannidis 2005
+    - Why most research findings are false: Ioannidis Plos Med., 2005
 * In social sciences and in psychology
     - Reproducibility Project: Psychology (https://osf.io/ezcuj/wiki/home/)
     - Simmons, J. P., L. D. Nelson, and U. Simonsohn. “False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant.” 2011. Shows an easy 60% FPR instead of 5%. 
@@ -30,6 +34,9 @@ Reproducibility - evidence of the problem
 
 Reproducibility - evidence of the problem
 ======================================================
+
+* Cancer Research: 
+    - Begley C.G. & Ellis L. Nature, (2012): "6 out of 53 key findings could not be replicated"
 
 * In brain imaging
     - Functional and Structural Neuroimaging: Reproducibility Issues in Multicentre MRI Studies, Jorge Jovicich, Univ. of Trento
