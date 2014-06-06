@@ -67,39 +67,39 @@ Why do we have a problem?
 ===========================
 Things are getting complex
 ----------------------------------------------------------------
-* Data complexity (eg: chip idiosynchrasis, format, preprocessings, etc)
+* Data complexity (eg: chip idiosyncrasies, format, preprocessings, etc)
 * Data need to be linked appropriately (remember the Duke scandal)
 * Data size: number of variables - files you cannot check visually
-* Methods: we have to trust external software
-* Methods: complexity higher
+* Methods: increasing number of steps and statistical complexity, external software you have to trust, 
 
 Why do we have a problem? 
 ===========================
 Publication pressure is high 
 --------------------------------
 - There's no way there isnt a paper out of this data set. 
-- You will not get your Phd if you don't publish this study
+- You won't get your Phd if you don't publish this study
 - You won't get tenure 
-- You won't get funding and peers recognition
+- You won't get funding or peers recognition
 - Ratio Benefice / Risk in favor of risky and quick publication
 - Conclusion: the pressure is *very* high
 
 Why do we have a problem? 
 ===========================
-Mistakes are done
---------------------
+Mistakes are done: unpopular topic
+-------------------------------------
 
-The "Mistakes" argument : an unpopular topic.
+> "The scientific method’s central motivation is the ubiquity of error — the awareness that mistakes and self-delusion can creep in absolutely anywhere and that the scientist’s effort is primarily expended in recognizing and rooting out error." 
+_Donoho, 2009._
 
 - Anatomy of an Error: in praise for transparency
 - The Left/Right issue
 - The Siemens slice ordering 
-- The ADHD 1000 connectome scripts
+- The ADHD 1000 connectomes scripts
 
 The power issue
 ===================
 
-* Ioannidis 2005 
+* Ioannidis 2005: _"Why most research findings are false"_
 * Remember what is power
 * What exactly are the issues of low powered studies
 * Tools to compute power
@@ -112,33 +112,33 @@ What exactly is power ?
 
 ![Power: $\large{W = 1-\beta}$ Here W=77%](./images/what_is_pw.pdf)
 
-Relation with n :
------------------
-$\hspace{4cm}$ \large{$\theta = \frac{\mu\sqrt{n}}{\sigma}$}
-
+Cohen d and relation with n :
+-----------------------------
+$\hspace{3cm} d = \frac{\bar{x_1} - \bar{x_2}}{\sigma} = \frac{\mu}{\sigma} \hspace{2cm}$ \large{$\theta = \frac{\mu\sqrt{n}}{\sigma}$}
 
 The power issue
 ===================
 - Studies of low power have low probability of detecting an effect (indeed!)
 - Studies of low power have low positive predictive value.
-If we have 4 chances over 5 that H0 is true (odd ratio = 1/4), and 1/5 that H1 true, with 30% power we have PPV = 60%.
+If we have 4 chances over 5 that H0 is true, and 1/5 that H1 true, with 30% power we have PPV = 60%.
 
 $PPV = P(H1 True | Detection) = \frac{W \, P_1}{\alpha \, P_0 + W \, P_1}$
 
-----------------  ----------- ----------  --------
- odd ratio=0.25   power=0.10,  alpha=0.05 PPV=0.33  
- odd ratio=0.25   power=0.30,  alpha=0.05 PPV=0.60  
- odd ratio=0.25   power=0.50,  alpha=0.05 PPV=0.71  
- odd ratio=0.25   power=0.70,  alpha=0.05 PPV=0.78  
- odd ratio=0.25   power=0.90,  alpha=0.05 PPV=0.82  
-----------------  ----------- ----------  --------
+-------------  ----------- ----------  --------
+ P1/P0 =0.25   power=0.10,  alpha=0.05 PPV=0.33  
+ P1/P0 =0.25   power=0.30,  alpha=0.05 PPV=0.60  
+ P1/P0 =0.25   power=0.50,  alpha=0.05 PPV=0.71  
+ P1/P0 =0.25   power=0.70,  alpha=0.05 PPV=0.78  
+ P1/P0 =0.25   power=0.90,  alpha=0.05 PPV=0.82  
+-------------  ----------- ----------  --------
 
 The power issue
 ===================
 What happens if the risk of error is increased ?
 -------------------------------------------------
 
-* ![higher type I error threshold to account for MC](./images/pw_with_mc.pdf)
+![higher type I error threshold to account for MC](./images/pw_with_mc.pdf)
+
 * effect on power: gets down
 * effect on PPV: gets down
 * effect on estimated effect size bias: gets up
@@ -185,14 +185,25 @@ Are imaging genetics studies reproducible?
 
 * Effect size in imaging genetics:
     - HTTLPR and amygdala:  Hariri 2002: p-value implies that locus explain about 28% of phenotypic variance. 
-    - BDNF and hippocampal volume :
-    - COMT and DLPFC: 
+    - KCTD8 brain growth: 2011: 21% of phenotypic variance with ~ 250 subjects
+    - BDNF and hippocampal volume : genuine effect or winners curse? d=0.12, Molendijk (2012)
+    - COMT and DLPFC: meta analysis : d = 0.55, paper suggest > 62 subjects Meir (2009) 
     - Stein et al, 2012: rs10784502 marker is associated with 0.58% of intracranial volume per risk allele 
 
 * reproducibility / error rate
     - Silver, Montanna, Nichols (beware of low threshold forming clusters)
     - Meyer-Lindenberg et al., 2008: Not a problem ? False positives in imaging genetics. However ... 
     - Flint and Mufano: First 2002 5-HTT result is unlikely
+
+Effect size decreases with years
+=====================================
+
+![Molendijk, 2012](./images/molendijk_2012_f4.pdf) 
+
+$\vspace{-1.2cm}$
+
+![Mier, 2009](./images/mier_2009_f4.pdf)
+
 
 What are the solutions: technical
 =====================================
@@ -209,7 +220,8 @@ What are the solutions: technical
 Power Calculator with 
 ======================
 
-- Purcell, et al. “Genetic Power Calculator [...]” Bioinformatics 19, no. 1 (2003): 149–50.
+- Purcell, et al. “Genetic Power Calculator [...]” Bioinformatics (2003).
+- http://www.sph.umich.edu/csg/abecasis/cats/
 
 ![http://pngu.mgh.harvard.edu/~purcell/gpc/](./images/gene_pw_calc.pdf)
 

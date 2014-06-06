@@ -6,6 +6,8 @@ convert -density 1200 ./images/donoho_advertising.png -scale 1500% ./images/dono
 convert -density 1200 ./images/what_is_power.png -scale 800% ./images/what_is_pw.pdf
 convert -density 1200 ./images/genetic_power_calculator.png -scale 400% ./images/gene_pw_calc.pdf
 convert -density 1200 ./images/power_with_mc.png -scale 400% ./images/pw_with_mc.pdf
+convert -density 1200 ./images/mier_2009_f4.png -scale 500% ./images/mier_2009_f4.pdf
+convert -density 1200 ./images/molendijk_2012_f4.png -scale 500% ./images/molendijk_2012_f4.pdf
 
 
 
