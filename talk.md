@@ -14,27 +14,31 @@ Reproducibility - preliminary remarks
 * Reminding ourselves : Reproducibility is the backbone of scientific activity
 * Reproducibility versus replicability
 * Is there a problem ?
-  - Not everybody is convinced that there is a problem 
-  - Do we have hard evidence ? 
+    - Not everybody is convinced that there is a problem 
+    - Do we have hard evidence ? 
 * Plan: 
     - Evidence for the problem
     - Causes: especially power issues
-    - what should we do
+    - What should we do
 
 Reproducibility - evidence of the problem
 ======================================================
 
-* In general: Nature, vol 496, 2013.
-    - A new mechanism for independently replicating findings needed: Nature Biotechnology 30, 806 (2012)
-    - Easy to misinterpret artefacts as biologically important results: Nature 487, 406 (2012) 
-    - Too many sloppy mistakes: Nature 483, 509 (2012) 
+* In general: Nature, "Reducing our irreproducibility", 2013.
+    - A new mechanism for independently replicating findings needed: Nature Biotech. (2012)
+    - Easy to misinterpret artefacts as biologically important results: Nature (2012) 
+    - Too many sloppy mistakes: Nature (2012)
+    - Revised standard for statistical evidence (PNAS 2013)
+
 * In epidemiology
-    - Why most research findings are false: Ioannidis, 2005
+    - Ioannidis 2011: “The FP/FN Ratio in Epidemiologic Studies:” 
+
 * In social sciences and in psychology
-    - Reproducibility Project: Psychology (open science fundation)
+    - Reproducibility Project: Psychology (open science foundation)
     - Simmons, et al. “... Undisclosed Flexibility ... Allows Presenting Anything as Significant.” 2011. 
+
 * In cognitive neuroscience
-    - Barch, Deanna M., and Tal Yarkoni. “... Special Issue on Reliability and Replication in Cognitive and Affective Neuroscience Research.”  2013.
+    - Barch, Deanna M., and Tal Yarkoni. “Special Issue on Reliability and Replication in Cognitive and Affective Neuroscience Research.”  2013.
 
 Reproducibility - evidence of the problem
 ======================================================
@@ -43,7 +47,8 @@ Reproducibility - evidence of the problem
     - Begley C.G. & Ellis L. Nature, (2012): "6 out of 53 key findings could not be replicated"
 
 * In brain imaging
-    - Functional and Structural Neuroimaging: Reproducibility Issues in Multicentre MRI Studies, Jorge Jovicich, Univ. of Trento
+    - Reproducibility Issues in Multicentre MRI Studies, Jorge Jovicich, Trento
+    - Raemaekers,  “Test–retest Reliability of fMRI...",  2007, Thirion et al., 2007.
 
 * In genetics
     - Ionannidis 2007: 16 SNPs hypothesized, check on 12-32k cancer/control: "... results are largely null." 
@@ -56,7 +61,7 @@ Why do we have a problem?
 * Things are getting complex
 * Publication pressure is high
 * Mistakes are done
-* **Power issues**
+* **_Power issues_**
 
 Why do we have a problem? 
 ===========================
@@ -86,15 +91,15 @@ Mistakes are done
 
 The "Mistakes" argument : an unpopular topic.
 
-- Ioannidis 2005
 - Anatomy of an Error: in praise for transparency
 - The Left/Right issue
 - The Siemens slice ordering 
-- The ADHD 1000 connectome
+- The ADHD 1000 connectome scripts
 
 The power issue
 ===================
 
+* Ioannidis 2005 
 * Remember what is power
 * What exactly are the issues of low powered studies
 * Tools to compute power
@@ -105,7 +110,12 @@ The power issue
 What exactly is power ?
 -----------------------
 
-![Power: illustration. Here P=77%](./images/what_is_pw.png)
+![Power: $\large{W = 1-\beta}$ Here W=77%](./images/what_is_pw.pdf)
+
+Relation with n :
+-----------------
+$\hspace{4cm}$ \large{$\theta = \frac{\mu\sqrt{n}}{\sigma}$}
+
 
 The power issue
 ===================
@@ -128,7 +138,10 @@ The power issue
 What happens if the risk of error is increased ?
 -------------------------------------------------
 
-/* simulation results here */
+* ![higher type I error threshold to account for MC](./images/pw_with_mc.pdf)
+* effect on power: gets down
+* effect on PPV: gets down
+* effect on estimated effect size bias: gets up
 
 
 The power issue
@@ -137,7 +150,7 @@ The power issue
 What is the estimated power in common meta analyses? 
 -----------------------------------------------------
 
-![Button et al. NRN, 2013](./images/butt_fig2.png)
+![Button et al. NRN, 2013](./images/butt_fig2.pdf)
 
 The power issue
 ===================
@@ -145,7 +158,7 @@ The power issue
 Studies of low power inflate the detected effect (1)
 -----------------------------------------------------
 
-![Button et al. NRN, 2013](./images/butt_fig5.png)
+![Button et al. NRN, 2013](./images/butt_fig5.pdf)
 
 
 The power issue
@@ -154,17 +167,17 @@ The power issue
 Studies of low power inflate the detected effect (2)
 ----------------------------------------------------
 
-![A quick simulation](./images/power_true.png)
+![A quick simulation](./images/power_true.pdf)
 
 
 What is specific to Imaging Genetics
 =======================================
 
-- Combinaison of imaging and of genetics issues: "AND" (if independant: would probability of getting it right would multiply: .7 * .7 = .5)
+- Combinaison of imaging and of genetics issues: "AND" (if independent: prob. of getting it right would multiply: .7 * .7 = .5)
 - The combination of having to get very large number of subjects for GWAS and not being able to get them in imaging
 - The multiple comparison issues
 - The "trendiness" of the field
-- The rapidity of the changes
+- The flexibility of analyses / exploration
 - The capacity to "rationalize findings" (eg: noise in brain images is always interpretable)
 
 Are imaging genetics studies reproducible?
@@ -178,7 +191,7 @@ Are imaging genetics studies reproducible?
 
 * reproducibility / error rate
     - Silver, Montanna, Nichols (beware of low threshold forming clusters)
-    - Not a problem ? False positives in imaging genetics.  Meyer-Lindenberg et al., 2008. However ... 
+    - Meyer-Lindenberg et al., 2008: Not a problem ? False positives in imaging genetics. However ... 
     - Flint and Mufano: First 2002 5-HTT result is unlikely
 
 What are the solutions: technical
@@ -187,10 +200,10 @@ What are the solutions: technical
 - Pre-register hypotheses 
 - Statistics: 
     - Always try to get a sense of the power
-    - Take the right statistical tool 
+    - Take robust statistical tools
     - Meta analysis if you can
-    - Replication always
-    - power analyses with the smallest effect size (cost does not enter in this calculation) 
+    - Replication if you can 
+    - Power analyses with the smallest effect size (cost does not enter in this calculation) 
     - Effect size variation estimation (bootstrapping)
 
 Power Calculator with 
@@ -198,7 +211,7 @@ Power Calculator with
 
 - Purcell, et al. “Genetic Power Calculator [...]” Bioinformatics 19, no. 1 (2003): 149–50.
 
-![Genetic calculator](./images/gene_pw_calc.png)
+![http://pngu.mgh.harvard.edu/~purcell/gpc/](./images/gene_pw_calc.pdf)
 
 
 What are the solutions: learning 
@@ -226,10 +239,10 @@ What are the solutions: social
     - Accept preregistration 
     - Increase the verifiability of analyses (code and data available)
 * Share data / share intermediate results 
-  - Increase the capacity of the community to verify
-  - Increase capacity to do meta/mega analyses 
-  - Because we are interested in reproducibility and replication 
-* Change their evaluation criteria - Decrease publication pressure
+    - Increase the capacity of the community to verify
+    - Increase capacity to do meta/mega analyses 
+    - Because we are interested in reproducibility and replication 
+* Change evaluation criteria - Decrease publication pressure
 
 Acknowledgement & Conclusion 
 ======================================
@@ -238,7 +251,7 @@ Acknowledgement & Conclusion
 * My colleagues in UCB
 * Jason (who reviewed all talks and had quite some work with mine :) and Tom 
 
-![Donoho on publication](./images/dono.png)
+![Donoho on publication](./images/dono.pdf)
 
 
 
