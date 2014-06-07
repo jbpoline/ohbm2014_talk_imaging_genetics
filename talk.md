@@ -107,20 +107,44 @@ The power issue
 
 The power issue
 ===================
+
+What is the effect ?
+---------------------
+
+$\hspace{3cm}\mu = \bar{x_1} - \bar{x_2}$
+
+What is the standardized effect ? (eg Cohen's d)
+-------------------------------------------------
+
+$\hspace{3cm}d = \frac{\bar{x_1} - \bar{x_2}}{\sigma} = \frac{\mu}{\sigma}$
+
+"Z" : Effect accounting for the sample size 
+--------------------------------------------------
+
+$\hspace{3cm}Z = \frac{\mu}{\sigma / \sqrt{n}}$
+
+The power issue
+===================
 What exactly is power ?
 -----------------------
 
 ![Power: $\large{W = 1-\beta}$ Here W=77%](./images/what_is_pw.pdf)
 
-Cohen d and relation with n :
------------------------------
-$\hspace{3cm} d = \frac{\bar{x_1} - \bar{x_2}}{\sigma} = \frac{\mu}{\sigma} \hspace{2cm}$ \large{$\theta = \frac{\mu\sqrt{n}}{\sigma}$}
+Cohen's d and relation with n :
+---------------------------------
+$\hspace{3cm} d = \frac{\bar{x_1} - \bar{x_2}}{\sigma} = \frac{\mu}{\sigma} \hspace{2cm}$ \large{$Z = \frac{\mu\sqrt{n}}{\sigma} = d \sqrt{n}$}
+
 
 The power issue
 ===================
 - Studies of low power have low probability of detecting an effect (indeed!)
-- Studies of low power have low positive predictive value.
-If we have 4 chances over 5 that H0 is true, and 1/5 that H1 true, with 30% power we have PPV = 60%.
+- Studies of low power have low positive predictive value: $PPV = P(H1 True | Detection)$
+- Studies of low power are likely to show inflated effect size 
+
+The power issue
+===================
+
+- If we have 4/5 that H0 is true, and 1/5 that H1 true, with 30% power: PPV = 60%.
 
 $PPV = P(H1 True | Detection) = \frac{W \, P_1}{\alpha \, P_0 + W \, P_1}$
 
@@ -129,28 +153,26 @@ $PPV = P(H1 True | Detection) = \frac{W \, P_1}{\alpha \, P_0 + W \, P_1}$
  P1/P0 =0.25   power=0.30,  alpha=0.05 PPV=0.60  
  P1/P0 =0.25   power=0.50,  alpha=0.05 PPV=0.71  
  P1/P0 =0.25   power=0.70,  alpha=0.05 PPV=0.78  
- P1/P0 =0.25   power=0.90,  alpha=0.05 PPV=0.82  
 -------------  ----------- ----------  --------
 
 The power issue
 ===================
-What happens if the risk of error is increased ?
+What happens with more stringent $\alpha$?
 -------------------------------------------------
 
 ![higher type I error threshold to account for MC](./images/pw_with_mc.pdf)
 
-* effect on power: gets down
-* effect on PPV: gets down
-* effect on estimated effect size bias: gets up
-
+* effect on power: power goes down
+* effect on PPV: PPV goes up 
+* effect on estimated effect size: size bias: goes up
 
 The power issue
 ===================
 
-What is the estimated power in common meta analyses? 
------------------------------------------------------
+Studies of low power inflate the detected effect (2)
+----------------------------------------------------
 
-![Button et al. NRN, 2013](./images/butt_fig2.pdf)
+![A quick simulation](./images/power_true.pdf)
 
 The power issue
 ===================
@@ -164,10 +186,10 @@ Studies of low power inflate the detected effect (1)
 The power issue
 ===================
 
-Studies of low power inflate the detected effect (2)
-----------------------------------------------------
+What is the estimated power in common meta analyses? 
+-----------------------------------------------------
 
-![A quick simulation](./images/power_true.pdf)
+![Button et al. NRN, 2013](./images/butt_fig2.pdf)
 
 
 What is specific to Imaging Genetics
@@ -198,11 +220,11 @@ Are imaging genetics studies reproducible?
 Effect size decreases with years
 =====================================
 
-![Molendijk, 2012](./images/molendijk_2012_f4.pdf) 
+![Molendijk, 2012, BDNF and hippocampal volume](./images/molendijk_2012_f4.pdf) 
 
 $\vspace{-1.2cm}$
 
-![Mier, 2009](./images/mier_2009_f4.pdf)
+![Mier, 2009, COMT & DLPFC](./images/mier_2009_f4.pdf)
 
 
 What are the solutions: technical
@@ -220,11 +242,50 @@ What are the solutions: technical
 Power Calculator with 
 ======================
 
-- Purcell, et al. “Genetic Power Calculator [...]” Bioinformatics (2003).
-- http://www.sph.umich.edu/csg/abecasis/cats/
+* Purcell et al. “Genetic Power Calculator” Bioinformatics (2003).
+
+$\vspace{-1.5cm}$
 
 ![http://pngu.mgh.harvard.edu/~purcell/gpc/](./images/gene_pw_calc.pdf)
 
+$\vspace{-1.5cm}$
+
+* http://www.sph.umich.edu/csg/abecasis/cats/
+
+CaTS-text --additive --risk 1.3 --pisample .95 --pimarkers 1. --frequency .3 --case 1067 --control 1067 --alpha 0.00000001 : yields For a one-stage study 0.314.
+
+
+Train the new generation 
+===============================
+
+- Statistics: more in depth that what is usual. 
+- Computing: how to check code, version control 
+- A more collaborative (eg Enigma) and a more open science model (github for science)
+  - Work such that the next post-doc will need weeks to start to progress - not months
+  - Work such that others in the community can reproduce **and** build upon
+
+What are the solutions: social 
+===================================
+
+* Increase awareness of editors to:
+    - Accept replication studies
+    - Accept preregistration 
+    - Increase the verifiability of analyses (code and data available)
+* Share data / share intermediate results 
+    - Increase the capacity of the community to verify
+    - Increase capacity to do meta/mega analyses 
+* Change evaluation criteria - Decrease publication pressure
+
+Acknowledgement & Conclusion 
+======================================
+
+* My colleagues in UCB (M. Brett, J. Millman, F. Perez)
+* My colleagues in Saclay (V. Frouin, B. Thirion)
+* Jason (who reviewed all talks and had quite some work with mine :) and Tom 
+
+![Donoho on publication](./images/dono.pdf)
+
+---------------------------------
 
 What are the solutions: learning 
 ===================================
@@ -234,36 +295,4 @@ What are the solutions: learning
     - How can others check my analyses? Learn the emerging social open science frameworks
 - Learn "one layer below" (A. Martelli)
 
-Train the new generation 
-===============================
-
-- Statistics: in depth
-- Computing: in depth
-- A more collaborative (eg Enigma) and a more open science model
-  - Work such that the next post-doc will need weeks to start progress - not months
-  - Work such that others in the community can reproduce **and** build upon
-
-What are the solutions: social 
-===================================
-
-* Put some pressure on editors to 
-    - Accept replication studies
-    - Accept preregistration 
-    - Increase the verifiability of analyses (code and data available)
-* Share data / share intermediate results 
-    - Increase the capacity of the community to verify
-    - Increase capacity to do meta/mega analyses 
-    - Because we are interested in reproducibility and replication 
-* Change evaluation criteria - Decrease publication pressure
-
-Acknowledgement & Conclusion 
-======================================
-
-* My colleagues in Saclay
-* My colleagues in UCB
-* Jason (who reviewed all talks and had quite some work with mine :) and Tom 
-
-![Donoho on publication](./images/dono.pdf)
-
-
-
+[rpsychologist.com/d3/cohend]rpsychologist.com/d3/cohend
