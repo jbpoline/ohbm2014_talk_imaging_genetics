@@ -206,11 +206,11 @@ Are imaging genetics studies reproducible?
 ==========================================
 
 * Effect size in imaging genetics:
-    - HTTLPR and amygdala:  Hariri 2002: p-value implies that locus explain about 28% of phenotypic variance. 
-    - KCTD8 brain growth: 2011: 21% of phenotypic variance with ~ 250 subjects
-    - BDNF and hippocampal volume : genuine effect or winners curse? d=0.12, Molendijk (2012)
-    - COMT and DLPFC: meta analysis : d = 0.55, paper suggest > 62 subjects Meir (2009) 
+    - HTTLPR and amygdala: Hariri 2002: p-value implies that locus explain about 28% of phenotypic variance. 
+    - KCTD8 brain growth: Paus 2012: 21% of phenotypic variance (250 subjects)
+    - BDNF and hippocampal volume : genuine effect or winners curse? d=0.12, p=0.02, Molendijk (2012)
     - Stein et al, 2012: rs10784502 marker is associated with 0.58% of intracranial volume per risk allele 
+    - COMT and DLPFC: meta analysis : d = 0.55, paper suggest > 62 subjects Meir (2009) 
 
 * reproducibility / error rate
     - Silver, Montanna, Nichols (beware of low threshold forming clusters)
@@ -261,8 +261,7 @@ Train the new generation
 - Statistics: more in depth that what is usual. 
 - Computing: how to check code, version control 
 - A more collaborative (eg Enigma) and a more open science model (github for science)
-  - Work such that the next post-doc will need weeks to start to progress - not months
-  - Work such that others in the community can reproduce **and** build upon
+- Work such that others in the community can reproduce **and** build upon
 
 What are the solutions: social 
 ===================================
@@ -274,7 +273,7 @@ What are the solutions: social
 * Share data / share intermediate results 
     - Increase the capacity of the community to verify
     - Increase capacity to do meta/mega analyses 
-* Change evaluation criteria - Decrease publication pressure
+* Decrease publication pressure (change evaluation criteria)  
 
 Acknowledgement & Conclusion 
 ======================================
