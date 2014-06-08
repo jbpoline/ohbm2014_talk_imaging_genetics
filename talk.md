@@ -25,19 +25,19 @@ Reproducibility - evidence of the problem
 ======================================================
 
 * In general: Nature, "Reducing our irreproducibility", 2013.
-    - A new mechanism for independently replicating findings needed: Nature Biotech. (2012)
-    - Easy to misinterpret artefacts as biologically important results: Nature (2012) 
-    - Too many sloppy mistakes: Nature (2012)
+    - New mechanism for independently replicating needed 
+    - Easy to misinterpret artefacts as biologically important  
+    - Too many sloppy mistakes 
     - Revised standard for statistical evidence (PNAS 2013)
 
-* In epidemiology
+> * In epidemiology
     - Ioannidis 2011: “The FP/FN Ratio in Epidemiologic Studies:” 
 
-* In social sciences and in psychology
+> * In social sciences and in psychology
     - Reproducibility Project: Psychology (open science foundation)
     - Simmons, et al. “... Undisclosed Flexibility ... Allows Presenting Anything as Significant.” 2011. 
 
-* In cognitive neuroscience
+> * In cognitive neuroscience
     - Barch, Deanna M., and Tal Yarkoni. “Special Issue on Reliability and Replication in Cognitive and Affective Neuroscience Research.”  2013.
 
 Reproducibility - evidence of the problem
@@ -46,15 +46,16 @@ Reproducibility - evidence of the problem
 * Oncology Research: 
     - Begley C.G. & Ellis L. Nature, (2012): "6 out of 53 key findings could not be replicated"
 
-* In brain imaging
-    - Reproducibility Issues in Multicentre MRI Studies, Jorge Jovicich, Trento
-    - Raemaekers,  “Test–retest Reliability of fMRI...",  2007, Thirion et al., 2007.
+> * In brain imaging
+    - Reproducibility Issues in Multicentre MRI Studies, J. Jovicich 
+    - Raemaekers,  “Test–retest Reliability of fMRI...",  Neuroimage, 2007 
+    - Thirion et al., Neuroimage 2007.
 
-* In genetics
+> * In genetics
     - Ionannidis 2007: 16 SNPs hypothesized, check on 12-32k cancer/control: "... results are largely null." 
     - Many references and warning: eg:"Drinking from the fire hose ..." by Hunter and Kraft, 2007.
 
-* And in imaging genetics ?
+> * And in imaging genetics ?
 
 Why do we have a problem? 
 ===========================
@@ -70,7 +71,7 @@ Things are getting complex
 * Data complexity (eg: chip idiosyncrasies, format, preprocessings, etc)
 * Data need to be linked appropriately (remember the Duke scandal)
 * Data size: number of variables - files you cannot check visually
-* Methods: increasing number of steps and statistical complexity, external software you have to trust, 
+* Methods: increasing number of steps and statistical complexity, external software you have to trust 
 
 Why do we have a problem? 
 ===========================
@@ -144,9 +145,10 @@ The power issue
 The power issue
 ===================
 
+- $PPV = P(H1 True | Detection) = \frac{W \, P_1}{\alpha \, P_0 + W \, P_1}$
+
 - If we have 4/5 that H0 is true, and 1/5 that H1 true, with 30% power: PPV = 60%.
 
-$PPV = P(H1 True | Detection) = \frac{W \, P_1}{\alpha \, P_0 + W \, P_1}$
 
 -------------  ----------- ----------  --------
  P1/P0 =0.25   power=0.10,  alpha=0.05 PPV=0.33  
@@ -195,7 +197,7 @@ What is the estimated power in common meta analyses?
 What is specific to Imaging Genetics
 =======================================
 
-- Combinaison of imaging and of genetics issues: "AND" (if independent: prob. of getting it right would multiply: .7 * .7 = .5)
+- Combinaison of imaging and of genetics issues ("AND" problem) 
 - The combination of having to get very large number of subjects for GWAS and not being able to get them in imaging
 - The multiple comparison issues
 - The "trendiness" of the field
@@ -207,15 +209,15 @@ Are imaging genetics studies reproducible?
 
 * Effect size in imaging genetics:
     - HTTLPR and amygdala: Hariri 2002: p-value implies that locus explain about 28% of phenotypic variance. 
-    - KCTD8 brain growth: Paus 2012: 21% of phenotypic variance (250 subjects)
-    - BDNF and hippocampal volume : genuine effect or winners curse? d=0.12, p=0.02, Molendijk (2012)
-    - Stein et al, 2012: rs10784502 marker is associated with 0.58% of intracranial volume per risk allele 
+    - KCTD8 / cortical area: Paus 2012: 21% of phenotypic variance (250 subjects)
+    - BDNF and hippocampal volume: genuine effect or winners curse? d=0.12, p=0.02, Molendijk (2012)
+    - Stein et al, 2012: marker is associated with 0.58% of intracranial volume per risk allele 
     - COMT and DLPFC: meta analysis : d = 0.55, paper suggest > 62 subjects Meir (2009) 
 
-* reproducibility / error rate
+> * Reproducibility / error rate
     - Silver, Montanna, Nichols (beware of low threshold forming clusters)
-    - Meyer-Lindenberg et al., 2008: Not a problem ? False positives in imaging genetics. However ... 
     - Flint and Mufano: First 2002 5-HTT result is unlikely
+    - Meyer-Lindenberg et al., 2008: Not a problem ? False positives in imaging genetics. However ... 
 
 Effect size decreases with years
 =====================================
@@ -231,13 +233,15 @@ What are the solutions: technical
 =====================================
 
 - Pre-register hypotheses 
-- Statistics: 
+    - More hypotheses 
+    - Candidate versus GWAS: cf Flint & Mufano, 2012
+> - Statistics: 
     - Always try to get a sense of the power
     - Take robust statistical tools
-    - Meta analysis if you can
-    - Replication if you can 
+    - Meta analysis / Replication whenever possible 
     - Power analyses with the smallest effect size (cost does not enter in this calculation) 
     - Effect size variation estimation (bootstrapping)
+
 
 Power Calculator with 
 ======================
@@ -250,7 +254,7 @@ $\vspace{-1.5cm}$
 
 $\vspace{-1.5cm}$
 
-* http://www.sph.umich.edu/csg/abecasis/cats/
+> * http://www.sph.umich.edu/csg/abecasis/cats/
 
 CaTS-text --additive --risk 1.3 --pisample .95 --pimarkers 1. --frequency .3 --case 1067 --control 1067 --alpha 0.00000001 : yields For a one-stage study 0.314.
 
